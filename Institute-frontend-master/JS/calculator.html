@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <script>
+        var number1 =Number( prompt("enter number"))
+        var symbol = prompt("enter symbol")
+        if (symbol == "+"){
+            var number2 = Number(prompt("Enter second number"))
+            var sum = number1 + number2
+            // console.log(sum)
+            document.write("first number:", number1, "<br>")
+            document.write('Symbol', symbol, "<br>")
+            document.write("Second number:", number2, "<br>")
+            document.write("Sum:", number1 + number2)
+        }
+        else if(symbol=="^"){
+            var number2 = Number(prompt("enter second number"))
+            var square = Math.pow(number1, number2)
+            // console.log(square)
+            document.write(square)
+        }else if(symbol =="-"){
+        var number3 = Number(prompt("Enter second number"))
+        var subs = number1 - number3
+        document.write(subs)
+        }else{
+
+        }
+        //square root = Math.sqrt(number)
+    </script>
+</body>
+</html>

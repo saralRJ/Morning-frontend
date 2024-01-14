@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+    <style>
+        p{
+            background-color: aqua;
+            height: 300px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello</h1>
+<button id="hide">hide me</button>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis praesentium eos harum aliquam delectus. Itaque, necessitatibus alias. Voluptatum voluptates quod quae rerum iure, quaerat molestias aliquid earum rem impedit aspernatur!</p>
+<button id="show">Show me</button>
+<button id="Hide-show">Hide/Show</button>
+    <script>
+        /*
+        selectors in jquery
+        element
+        class
+        id
+
+        syntax:
+        $(selector).method()
+
+        $(selector).event(function(){
+            $('selector').method()
+        })
+        */
+    //    $('#hide').click(function(){
+    //     $('h1').hide();
+    //    });
+
+    //    $('#show').click(function(){
+    //     $('h1').show();
+    //    });
+
+    //    $('p').click(function(){
+    //     $(this).hide();
+    //    })
+
+    //    $('#Hide-show').click(function(){
+    //     $('p').toggle(500);
+    //    })
+
+        $(document).ready(function(){
+            $('#Hide-show').dblclick(function(){
+                $('p').slideToggle(500)
+            })
+        })
+
+    </script>
+    
+</body>
+</html>

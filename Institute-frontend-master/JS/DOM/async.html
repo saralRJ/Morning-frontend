@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        asynchronous and synchronous behaviour
+        */
+
+        var fruits = ['mango','orange','apple']
+        const displayFruits = ()=>{
+            setTimeout(() =>{
+                fruits.map((item)=>{
+                    document.write(`<li>${item}</li>`)
+                })
+            }, 3000);
+        }
+
+        const addFruits = (cb) =>{
+            setTimeout(()=>{
+                fruits.push('kiwi')
+                //cb is callback
+                cb()
+            }, 4000);
+        }
+
+        displayFruits()
+        addFruits(displayFruits)
+
+    </script>
+</body>
+</html>
+

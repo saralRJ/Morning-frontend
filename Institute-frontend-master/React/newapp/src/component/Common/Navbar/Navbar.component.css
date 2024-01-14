@@ -1,0 +1,16 @@
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    /* padding: 10px; */
+    background-color: brown;
+    color: white;
+}
+li{
+    padding: 15px;
+}
+li:hover{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+    transition: 0.3s;
+}

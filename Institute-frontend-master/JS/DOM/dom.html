@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 class="" id="demo">Good morning</h1>
+    <img src="" alt="">
+    <script>
+        /*
+        dom 
+        document object model
+
+        method/property
+        getElementById()
+        getElementByClassName()
+        querySelector()
+        querySelectorAll()
+        createElement()
+        
+        innerHTML
+        textContent
+
+        */
+       var bodies = document.body;
+       var paragraph = document.createElement('p')
+       bodies.append(paragraph)
+       document.querySelector('p').innerHTML = 'hello'
+       document.querySelector('p').setAttribute('id','container')
+       document.querySelector('p').id= 'contains'
+        document.querySelector('h1').innerHTML= 'Good Night'
+        document.getElementById('demo').innerHTML = 'Good afternoon'
+        document.querySelector('img').setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png')
+        document.getElementById('demo').style.color = 'red'
+        document.getElementById('demo').style.backgroundColor = 'black' 
+        console.log(bodies)
+    </script>
+</body>
+</html>

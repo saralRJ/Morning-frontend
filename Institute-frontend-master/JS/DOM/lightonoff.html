@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lights on and off</title>
+</head>
+<body>
+    <!-- <img src="off.jpg" alt="" id="lights">
+    <br>
+    <button onclick="lightOn()">On</button>
+    <button onclick="lightoff()">Off</button>
+    <script>
+        function lightOn(){
+            document.getElementById('lights').src='on.jpg'
+        }
+        function lightoff(){
+            document.getElementById('lights').src='off.jpg'
+        }
+    </script> -->
+    <img src="" alt="" id="light-image">
+    <br>
+    <button onclick="onOff()" id="switch">on</button>
+    <script>
+        var light_status = 'Off'
+        function onOff(){
+            if(light_status =='off'){
+                document.getElementById('light-image').src='on.jpg'
+                document.getElementById('switch').innerHTML = 'Off'
+                light_status='on'
+            }else{
+                document.getElementById('light-image').src='off.jpg'
+                document.getElementById('switch').innerHTML = 'On'
+                light_status='off'
+            }
+        }
+    </script>
+</body>
+</html>

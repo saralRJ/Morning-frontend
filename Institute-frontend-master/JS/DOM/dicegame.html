@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <style>
+        h1, h2{
+            /* margin: auto; */
+            text-align: center;
+        }
+        .dice{
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            width: 500px;
+            /* background-color: aqua; */
+        }
+        .button{
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dice game</h1>
+
+    <div class="dice">
+        <div class="dice1">
+            <h2>Player One</h2>
+            <img src="dice1.jpg" alt="" id="player1">
+        </div>
+        <div class="dice2">
+            <h2>Player two</h2>
+            <img src="dice1.jpg" alt="" id="player2">
+        </div>
+    </div>
+    <h2 id="result"></h2>
+
+    <script>
+        var diceface = ['dice1.jpg', 'dice2.jpg', 'dice3.jpg', 'dice4.jpg', 'dice5.jpg', 'dice6.jpg']
+       
+        function play(){
+
+            var number1 = Math.random() * 5
+            number1 = number1.toFixed(0)
+            // console.log(number1)
+       
+
+            var number2 = Math.random() * 5
+            number2 = number2.toFixed(0)
+            // console.log(number2)
+        
+
+        document.getElementById('player1').src = diceface[number1]
+        document.getElementById('player2').src = diceface[number2]
+
+
+            if (number1 > number2) {
+                document.getElementById('result').innerHTML = 'Player one is the winner'
+            } else if (number2 > number1) {
+                document.getElementById('result').innerHTML = 'Player two is the winner'
+            } else {
+                document.getElementById('result').innerHTML = 'Draw'
+            }
+        }
+            </script>
+            <div class="button">
+                <button onclick="play()">Play</button>
+            </div>
+</body>
+
+</html>

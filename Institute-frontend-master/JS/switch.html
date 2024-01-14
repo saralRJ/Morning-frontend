@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        switch
+        syntax:
+        switch(choice){
+            case1:
+                body of case1
+            break;
+            case2:
+                body of case2
+            break;
+            case3:
+                body of case3
+            break;
+            case N:
+                body of case N
+                break;
+            default:
+                body of default
+        }
+        */
+
+        function sum(n1) {
+            // var n1 = Number(prompt('enter first number'))
+            var n2 = Number(prompt('enter second number'))
+            var add = n1 + n2
+            document.write(add)
+        }
+
+        function sub(n1) {
+            // var n1 = Number(prompt('enter first number'))
+            var n2 = Number(prompt('enter second number'))
+            var minus = n1 - n2
+            document.write(minus)
+        }
+        function mul(n1) {
+            // var n1 = Number(prompt('enter first number'))
+            var n2 = Number(prompt('enter second number'))
+            var mult = n1 * n2
+            document.write(mult)
+        }
+        function div(n1) {
+            // var n1 = Number(prompt('enter first number'))
+            var n2 = Number(prompt('enter second number'))
+            var division = n1 / n2
+            document.write(division)
+        }
+
+           var n1 = Number(prompt('enter first number'))
+        var sym = prompt('enter symbol')
+        switch (sym) {
+            case '+':
+                sum(n1)
+                break;
+            case '-':
+                sub(n1)
+                break;
+            case '*':
+                mul(n1)
+                break;
+            case '/':
+                div(n1)
+                break;
+            default:
+                document.write("Enter symbol")
+        }
+    </script>
+</body>
+
+</html>

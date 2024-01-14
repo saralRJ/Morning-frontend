@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>image slider</title>
+    <style>
+        .container {
+            background-color: aqua;
+            width: 700px;
+            height: 700px;
+            margin: auto;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: 700px;
+        }
+
+        .previous,
+        .next {
+            position: absolute;
+            top: 45%;
+            font-size: 35px;
+            color: red;
+        }
+
+        .previous:hover,
+        .next:hover {
+            color: black;
+            cursor: pointer;
+        }
+
+        .previous {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/shoes1.jpg" alt="" width="600px" id="slider">
+        <p class="next" onclick="next()">&gt;</p>
+        <p class="previous" onclick="previous()">&lt;</p>
+    </div>
+    <script>
+        var image_arr = ['images/shoes1.jpg','images/shoes2.jpg','images/shoes4.jpg','images/shoes5.jpg']
+        var index = 1
+        function next(){
+            if(index >=4){
+                index = 0
+            }
+            document.getElementById('slider').src= image_arr[index]
+            index++
+        }
+        function previous(){
+            index--
+            if(index<0){
+                index = 3
+            }
+            document.getElementById('slider').src= image_arr[index]
+        }
+    </script>      
+</body>
+
+</html>

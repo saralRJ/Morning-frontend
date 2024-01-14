@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Loop</title>
+</head>
+
+<body>
+    <h1>Nested For Loop</h1>
+    <script>
+        /*
+        pattern
+        1
+        12
+        123
+        1234
+        12345
+        */
+        // for(i=1; i<=5;i++){
+        //     for(j=1;j<=i;j++){
+        //         document.write(j)
+        //     }
+        //     document.write("<br>")
+        // }
+
+        /*
+        5
+        54
+        543
+        5432
+        54321
+        */
+        //    for(i=5;i>=1;i--){
+
+        //     for(j=5;j>=i;j--){
+        //         document.write(j)
+        //     }
+        //     document.write("<br>")
+        //    }
+
+        /*
+        pattern
+        *
+        **
+        ***
+        ****
+        *****
+        */
+        // for (i = 5; i >= 1; i--) {
+        //     for (j = 5; j >= i; j--) {
+        //         document.write('*')
+        //     }
+        //     document.write("<br>")
+        // }
+
+        /*
+        4)
+        1
+        13
+        135
+        1357
+        13579
+        */
+    //    for(i=1;i<=5;i++){
+    //     for(j=1;j<=i+i;j++){
+    //         if(j%2!=0){
+    //         document.write(j)
+    //         }
+    //     }document.write('<br>')
+    //    }
+       
+        /*
+        5)
+        2
+        24
+        246
+        2468
+        246810
+        */
+    //    for(i=1;i<=5;i++){
+    //     for(j=2;j<=i+i;j++){
+    //         if(j%2==0){
+    //             document.write(j)
+    //         }
+    //     }document.write('<br>')
+    //    }
+        
+       /*
+       6)
+       12345
+       1234
+       123
+       12
+       1
+       */
+
+       for(i=5;i>=1;i--){
+        for(j=1;j<=i;j++){
+            document.write(j)
+        }
+        document.write('<br>')
+       }
+    </script>
+</body>
+
+</html>
