@@ -54,12 +54,53 @@ export class Register extends Component {
                 break;
             case 'email':
                 errorMsg = this.state.data[fieldName]
-                    ? this.state.data[fieldName].match(/$[@gmail.com]/)
+                    ? this.state.data[fieldName].match(/[@gmail.com]/)
                         ? ''
                         : 'Invalid email'
                     : 'required field'
                 break;
-
+            case 'Password':
+                errorMsg = this.state.data['confirmPassword']
+                ? this.state.data['confirmPassword'] === this.state.data[fieldName]
+                    ? ''
+                    : "password doesn't match "
+                :this.state.data[fieldName]
+                    ? this.state.data[fieldName].match(/^[a-z]/)
+                        ? this.state.data[fieldName].match(/[A-Z]/)
+                            ? this.state.data[fieldName].match(/[0-9]/)
+                                ? this.state.data[fieldName].match(/[!@#$%^&*]/)
+                                    ? this.state.data[fieldName].length < 8
+                                        ? 'password must contain atleast 8 characters'
+                                        : this.state.data[fieldName].length > 30
+                                            ? 'password must contain maximum 30 character'
+                                            : ''
+                                    : 'password must include a special character'
+                                : 'password must include atleast one number'
+                            : 'Password must include atleast one uppercase alphabet'
+                        : 'password must include atleast one lowercase alphabet'
+                    : 'required field'
+                break;
+            case 'confirmPassword':
+                errorMsg = this.state.data['Password']
+                    ? this.state.data['Password'] === this.state.data[fieldName]
+                        ? ''
+                        : "password doesn't match "
+                    : this.state.data[fieldName]
+                        ? this.state.data[fieldName].match(/^[a-z]/)
+                            ? this.state.data[fieldName].match(/[A-Z]/)
+                                ? this.state.data[fieldName].match(/[0-9]/)
+                                    ? this.state.data[fieldName].match(/[!@#$%^&*]/)
+                                        ? this.state.data[fieldName].length < 8
+                                            ? 'password must contain atleast 8 characters'
+                                            : this.state.data[fieldName].length > 30
+                                                ? 'password must contain maximum 30 character'
+                                                : ''
+                                        : 'password must include a special character'
+                                    : 'password must include atleast one number'
+                                : 'Password must include atleast one uppercase alphabet'
+                            : 'password must include atleast one lowercase alphabet'
+                        : 'required field'
+                break;
         }
         this.setState(previousError => ({
             error: {
@@ -80,7 +121,7 @@ export class Register extends Component {
             //     })
             // }
             this.setState({
-                isValidForm: err.length ===0
+                isValidForm: err.length === 0
             })
         })
     }
@@ -95,11 +136,13 @@ export class Register extends Component {
                     <p>{this.state.error.Username}</p>
                     <label className='fs-5'>Password</label>
                     <input type='text' name="Password" className=' mb-3' onChange={this.handleChange} />
+                    <p>{this.state.error.Password}</p>
                     <label className='fs-5'>email</label>
                     <input type='text' name="email" className=' mb-3' onChange={this.handleChange} />
                     <p>{this.state.error.email}</p>
                     <label className='fs-5'>confirmpassword</label>
-                    <input type='text' name="confirmpassword" className=' mb-3' onChange={this.handleChange} />
+                    <input type='text' name="confirmPassword" className=' mb-3' onChange={this.handleChange} />
+                    <p>{this.state.error.confirmPassword}</p>
                     <label className='fs-5'>address</label>
                     <input type='text' name="address" className=' mb-3' onChange={this.handleChange} />
                     <label className='fs-5'>Dob</label>
