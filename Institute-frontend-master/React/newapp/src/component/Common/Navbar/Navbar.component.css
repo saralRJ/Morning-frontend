@@ -8,6 +8,11 @@ ul{
 }
 li{
     padding: 15px;
+    color: white;
+}
+.page{
+    color: white;
+    text-decoration: none;
 }
 li:hover{
     cursor: pointer;
