@@ -7,10 +7,19 @@ export const Navbar = (props) => {
     //ui logics goes here
     var header = props.isLoggedIn
         ? <ul>
-            <li>Home</li>
-            <li>Product</li>
-            <li>Gallery</li>
-            <li>Logout</li>
+            <li>
+                <Link className='page'to={'/'}>Home</Link>
+                </li>
+            <li>
+                <Link className='page'to={'/product'}>Product</Link>
+                </li>
+            <li>
+                <Link className='page'to={'/gallery'}>Gallery</Link>
+                
+                </li>
+            <li>
+                <Link className='page'to={'/logout'}>Logout</Link>
+                </li>
         </ul>
         : <ul>
             <li>
@@ -24,6 +33,9 @@ export const Navbar = (props) => {
             </li>
             <li>
                 <Link className='page' to={"/login"}>Login</Link>
+            </li>
+            <li>
+                <Link className='page' to={"/signin"}>Sign in</Link>
             </li>
             <li>
                 <Link className='page' to={"/register"}>Register</Link>
