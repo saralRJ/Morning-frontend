@@ -26,6 +26,21 @@ export class Register extends Component {
         }
     }
 
+    //init
+    componentDidMount=()=>{
+        // api call
+        // data prepare
+        console.log('init stage at third')
+    }
+    //update
+    componentDidUpdate =()=>{
+        console.log('update stage at fourth')
+    }
+    //delete
+    componentWillUnmount = ()=>{
+        console.log('delete at last')
+    }
+
     handleChange = event => {
         const { name, value } = event.target;
         this.setState(previousData => ({
@@ -125,12 +140,23 @@ export class Register extends Component {
             })
         })
     }
-    render() {
+    handleSubmit = (e) => {
+        e.preventDefault()
+        this.setState({
+            isSubmitting: true
+        })
+        setTimeout(()=>{
+            this.setState({
+                isSubmitting: false
+            })
+        }, 3000);
+    }
 
+    render() {
 
         return (
             <div>
-                <form className='my-5'>
+                <form className='my-5' onSubmit={this.handleSubmit}>
                     <label className='fs-5'>Username</label>
                     <input type='text' name="Username" className='mb-3' onChange={this.handleChange} />
                     <p>{this.state.error.Username}</p>
