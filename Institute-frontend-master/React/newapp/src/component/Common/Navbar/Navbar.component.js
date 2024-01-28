@@ -38,6 +38,9 @@ export const Navbar = (props) => {
                 <Link className='page' to={"/signin"}>Sign in</Link>
             </li>
             <li>
+                <Link className='page' to={"/signup"}>Sign Up</Link>
+            </li>
+            <li>
                 <Link className='page' to={"/register"}>Register</Link>
             </li>
         </ul>

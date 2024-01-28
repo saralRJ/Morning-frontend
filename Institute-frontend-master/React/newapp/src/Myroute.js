@@ -5,6 +5,7 @@ import { Register } from "./component/Auth/Register/Register.component";
 import { Navbar } from "./component/Common/Navbar/Navbar.component";
 import { Login2 } from "./component/Auth/Login/Login2.component";
 import { Home } from "./component/Pages/Home.component";
+import { Reg } from "./component/Auth/Register/Registerdata";
 
 // const Home = (props) => {
 //     return <h1>Home page</h1>
@@ -33,6 +34,7 @@ export const Myroutes = (props) =>{
                 <Route path='/login' element={<Login/>}></Route>
                 <Route path='/register' element={<Register/>}></Route>
                 <Route path="/signin" element={<Login2/>}/>
+                <Route path="/signup" element={<Reg/>}/>
                 <Route path='/product' element={<Product/>}/>
             </Routes>
         </Router>
