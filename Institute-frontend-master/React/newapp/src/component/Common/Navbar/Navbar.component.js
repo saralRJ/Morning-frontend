@@ -32,6 +32,9 @@ export const Navbar = (props) => {
                 <Link className='page' to={"/contact"}>Contact</Link>
             </li>
             <li>
+                <Link className='page' to={"/blog"}>Blog</Link>
+            </li>
+            <li>
                 <Link className='page' to={"/login"}>Login</Link>
             </li>
             <li>
