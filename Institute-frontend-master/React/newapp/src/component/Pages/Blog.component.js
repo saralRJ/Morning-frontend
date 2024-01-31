@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Card } from "./Card.component";
 
 export const Blog = props => {
     const [user, setUser] = useState([])
@@ -18,9 +19,10 @@ export const Blog = props => {
         <div>
             {
                 user.map((item, index)=>{
-                    return <h2>{item.title}</h2>
+                    return <Card key={index} Card_item={item}/>
                 })
             }
+            <div className='text-center'>
             {
                 limit < 35 &&
             <button onClick={()=> setLimit(limit + 5)} >View More</button>
@@ -29,6 +31,7 @@ export const Blog = props => {
                 limit > 0 &&
             <button onClick={()=> setLimit(limit - 5)}>View less</button>
             }
+            </div>
         </div>
     )
 }
