@@ -1,15 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import { createStore } from 'redux';
+import { combineReducer, combineReducers, createStore } from 'redux';
 import { MyRoute } from './Component/Myroute';
-import countReducer from './Component/countReducer';
 import { Provider } from 'react-redux';
+import { gameReducer } from './reducer/Game.reducer';
+import countReducer from './reducer/countReducer';
 
 function App() {
-  const my_store= createStore(countReducer)
+ 
+  const combinedReducer = combineReducers({
+    count: countReducer,
+    game: gameReducer
+  })
+
+  const stores= createStore(combinedReducer)
   return (
     <>
-    <Provider store={my_store}>
+    <Provider store={stores}>
 
      <MyRoute/>
     </Provider>

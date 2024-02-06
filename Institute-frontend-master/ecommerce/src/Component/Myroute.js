@@ -13,7 +13,7 @@ export const MyRoute = (props) => {
             <Routes>
                 <Route path = '/' element={<Home/>}></Route>
                 <Route path = '/count' element={<Count/>}></Route>
-
+                
             </Routes>
             <Footer/>
         </Router>
