@@ -1,5 +1,6 @@
 
 import React from "react"
+import { Link } from "react-router-dom"
 
 export const Navbar = () => {
 return(
@@ -7,7 +8,7 @@ return(
 
     <div class="row bg-info p-4">
         <div class="col-md-3 text-center fs-2">
-            <a class="navbar-brand" href="index.html">ourStore</a>
+            <Link class="navbar-brand" to="index.html">ourStore</Link>
         </div>
         <div class="col-md-6">
             <form class="d-flex" role="search">
@@ -16,9 +17,9 @@ return(
             </form>
         </div>
         <div class="col-md-3 fs-3 d-flex justify-content-evenly">
-            <a href="login.html" class="text-dark"><i class="bi bi-box-arrow-in-right"></i></a>
-            <a href="register.html" class="text-dark"><i class="bi bi-person-add"></i></a>
-            <a href="cart.html" class="text-dark"><i class="bi bi-cart"></i></a>
+            <Link to="login.html" class="text-dark"><i class="bi bi-box-arrow-in-right"></i></Link>
+            <Link to="register.html" class="text-dark"><i class="bi bi-person-add"></i></Link>
+            <Link to="cart.html" class="text-dark"><i class="bi bi-cart"></i></Link>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg bg-secondary">
@@ -31,19 +32,19 @@ return(
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-evenly">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                        <Link class="nav-link active text-light" aria-current="page" to="index.html">Home</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="product.html">Product</a>
+                        <Link class="nav-link active text-light" aria-current="page" to="/product">Product</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="blog.html">Blog</a>
+                        <Link class="nav-link active text-light" aria-current="page" to="blog.html">Blog</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="about.html">About</a>
+                        <Link class="nav-link active text-light" aria-current="page" to="about.html">About</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="contact.html">Contact</a>
+                        <Link class="nav-link active text-light" aria-current="page" to="contact.html">Contact</Link>
                     </li>
                 </ul>
             </div>

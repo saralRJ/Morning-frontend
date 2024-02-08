@@ -1,0 +1,13 @@
+.image-block{
+    overflow: hidden;
+}
+.image-zoom:hover{
+    transform: scale(2);
+    transition: 2s;
+    cursor: pointer;
+}
+table i:hover{
+    cursor: pointer;
+    transform: scale(2, 2);
+    transition: 0.3s;
+}

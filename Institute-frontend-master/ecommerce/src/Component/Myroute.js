@@ -5,6 +5,7 @@ import { Navbar } from "./Common/Navbar.component";
 import { Home } from "./Pages/Home.component";
 import { Footer } from "./Common/Footer.component";
 import Count from "./Pages/Count.component";
+import Product from "./Pages/Product.component";
 
 export const MyRoute = (props) => {
     return(
@@ -13,6 +14,7 @@ export const MyRoute = (props) => {
             <Routes>
                 <Route path = '/' element={<Home/>}></Route>
                 <Route path = '/count' element={<Count/>}></Route>
+                <Route path = '/product' element={<Product/>}></Route>
                 
             </Routes>
             <Footer/>
