@@ -1,8 +1,10 @@
 
 import React from "react"
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 
 export const Navbar = () => {
+    const cart_item_length = useSelector(product => product.cart.length)
 return(
     <div>
 
@@ -45,6 +47,9 @@ return(
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link active text-light" aria-current="page" to="contact.html">Contact</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link active text-light" aria-current="page" to="contact.html">No.of item in cart:{cart_item_length}</Link>
                     </li>
                 </ul>
             </div>
