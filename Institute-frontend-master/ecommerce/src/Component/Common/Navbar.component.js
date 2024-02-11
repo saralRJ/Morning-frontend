@@ -21,7 +21,7 @@ return(
         <div class="col-md-3 fs-3 d-flex justify-content-evenly">
             <Link to="login.html" class="text-dark"><i class="bi bi-box-arrow-in-right"></i></Link>
             <Link to="register.html" class="text-dark"><i class="bi bi-person-add"></i></Link>
-            <Link to="cart.html" class="text-dark"><i class="bi bi-cart"></i></Link>
+            <Link to="cart" class="text-dark"><i class="bi bi-cart"></i></Link>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg bg-secondary">
@@ -49,7 +49,7 @@ return(
                         <Link class="nav-link active text-light" aria-current="page" to="contact.html">Contact</Link>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link active text-light" aria-current="page" to="contact.html">No.of item in cart:{cart_item_length}</Link>
+                        <Link class="nav-link active text-light" aria-current="page" to="contact.html">No.of item in cart: {cart_item_length}</Link>
                     </li>
                 </ul>
             </div>

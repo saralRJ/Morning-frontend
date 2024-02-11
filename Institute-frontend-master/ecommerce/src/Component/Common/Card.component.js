@@ -1,10 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Card = ({product}) => {
     const dispatch = useDispatch()
 
     function addToCart(){
+        toast.success("item added to cart")
         dispatch({
             type: "Add_To_Cart",
             payload:product

@@ -7,6 +7,7 @@ import { gameReducer } from './reducer/Game.reducer';
 import countReducer from './reducer/countReducer';
 import itemReducer from './reducer/Item.reducer';
 import cartReducer from './reducer/Cart.reducer';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
  
@@ -21,7 +22,7 @@ function App() {
   return (
     <>
     <Provider store={stores}>
-
+    <ToastContainer position ="top-center"/>
      <MyRoute/>
     </Provider>
     </>
