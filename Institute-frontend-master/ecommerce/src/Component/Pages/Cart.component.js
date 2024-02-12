@@ -1,12 +1,22 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 export const Cart = (props) => {
-    const item_in_cart = useSelector(item=>item.cart)
+    const item_in_cart = useSelector(item=>item.cart.cart_item)
+    const dispatch = useDispatch()
+
+    function removeItem(){
+        toast.warning(item_in_cart.product_name, 'removed from the cart')
+        dispatch({
+            type:"Remove_From_Cart",
+            payload: item_in_cart
+        })
+    }
     return(
         <>
-        <div className ="w-75 m-auto shadow-lg p-5">
-<table className="table table-haver table-bordered">
+        <div className ="w-75 m-auto shadow-lg p-5 mb-5">
+<table className="table table-haver table-bordered text-center">
         <thead>
             <tr>
                 <th>S.No</th>
@@ -24,8 +34,8 @@ export const Cart = (props) => {
                     <td><img src={item.product_image} style={{width:'150px'}}/></td>
                     <td>{item.product_name}</td>
                     <td>{item.product_price}</td>
-                    <td>
-                        <button className='btn btn-danger'>Delete</button>
+                    <td onClick={removeItem}>
+                    <i class="bi bi-trash fs-3 text-danger" ></i>
                     </td>
                     
                 </tr>
